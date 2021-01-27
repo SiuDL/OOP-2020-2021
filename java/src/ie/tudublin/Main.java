@@ -20,10 +20,10 @@ public class Main
         System.out.println(misty);
         System.out.println(topCat);
 
-        Cat tom = new Cat("Tom");
+        Cat ginger = new Cat("Ginger");
 
-        while(tom.getLives()!=0){
-            tom.Kill();
+        while(ginger.getLives()!=0){
+            ginger.Kill();
         }
     }
 }

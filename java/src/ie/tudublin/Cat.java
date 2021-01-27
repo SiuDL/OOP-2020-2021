@@ -2,12 +2,13 @@ package ie.tudublin;
 
 public class Cat extends Animal
 {
+    private int numLives;
+
     public Cat(String name)
     {
         super(name);
+        numLives = 9;
     }
-
-    private int numLives = 9;
 
     public int getLives(){
         return numLives;
