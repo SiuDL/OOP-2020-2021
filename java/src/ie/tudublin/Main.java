@@ -20,11 +20,10 @@ public class Main
         System.out.println(misty);
         System.out.println(topCat);
 
-        // What will get printed out??
+        Cat tom = new Cat("Tom");
 
-        // 1. topcat, Garfield
-        // 2. garfield, Garfield 
-
-
+        while(tom.getLives()!=0){
+            tom.Kill();
+        }
     }
 }
