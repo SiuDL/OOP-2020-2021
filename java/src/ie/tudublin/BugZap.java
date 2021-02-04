@@ -10,6 +10,7 @@ public class BugZap extends PApplet{
 
     float playerX, playerY, playerWidth, playerHeight, bugX, bugY, bugWidth, bugHeight, lazerX, lazerY;
     int lazerCD, lazerBeam, score = 0;
+
     boolean check = false;
     boolean menuCheck = false;
     
@@ -24,7 +25,7 @@ public class BugZap extends PApplet{
         bugHeight = 100;
         smooth(); // ANTIALIASING
     }
-
+    
     public void drawPlayer(float x, float y, float w, float h){	
         if(lazerCD != 20 && check == true){
             stroke(255, 0, 0);
@@ -126,6 +127,7 @@ public class BugZap extends PApplet{
                 break;
             case ' ':
                 menuCheck = true;
+                setup();
                 break;
             case 'q':
                 menuCheck = false;
