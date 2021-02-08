@@ -39,6 +39,68 @@ Resources
 - https://github.com/skooter500/OOP_Labtest1_2017_Starter
 - https://github.com/skooter500/OOP-LabTest1-2016
 
+# Week 3 - Git, the if statement and loops in Java
+
+# Lecture 
+- [Read the git manual](https://git-scm.com/docs/user-manual.html)
+- The if statement
+- While loops
+- For loops
+
+## Procedural drawing exercises:
+
+Get the latest branches of the repo and create a branch called loops:
+
+```
+git checkout master
+git pull upstream master
+git checkout -b loops
+```
+
+### if statement 
+
+- 4 exercises. Click the image for video:
+
+[![YouTube](http://img.youtube.com/vi/18kMOeygmHA/0.jpg)](https://www.youtube.com/watch?v=18kMOeygmHA)
+
+### for loops:
+
+Use a loop, rect and the HSB colour space:
+
+![Sketch](images/p31.png)
+
+Use a loop, rect and the HSB colour space:
+
+![Sketch](images/p35.png)
+
+Use a loop, rect and the HSB colour space:
+
+![Sketch](images/p36.png)
+
+Use a loop, ellipse, and the HSB colour space:
+
+![Sketch](images/p34.png)
+
+Use a loop, ellipse and the HSB color space to draw this:
+
+![Sketch](images/p33.png)
+
+Use a nested loop to draw this:
+
+![Sketch](images/p32.png)
+
+Try and draw this using ONE for loop:
+
+![Sketch](images/p27.png)
+
+Use sin and cos to draw this:
+
+![Sketch](images/p30.png)
+
+Use line, sin and cos to draw regular polygons like squares, pentagons, octogons etc:
+
+![Sketch](images/p10.png)
+
 # Week 2 - Hello Processing
 
 ## Tutorial
