@@ -85,6 +85,37 @@ public class Loops extends PApplet {
                 }
             }
             break;
+            case 4:{
+                int i, shiftHeight = 0;
+                int numRects = 10;
+                float w = width / (float) numRects;
+                float cgap = 255 / (float) numRects;
+
+                for(i = 0; i < numRects; i++){
+                    fill(cgap * i, 255, 255);
+                    rect(i * w, shiftHeight, w, height/10);
+                    shiftHeight += 50;
+                }
+                break;
+            }
+            case 5:{
+                int i;
+                int shiftHeight = 0;
+                int numRects = 10;
+                float w = width / (float) numRects;
+                float cgap = 255 / (float) numRects;
+
+                for(i = 0; i < numRects; i++){
+                    fill(cgap * i, 255, 255);
+                    rect(i * w, shiftHeight, w, height/10);
+                    rect(width-(i*w)-w, shiftHeight, w, height/10);
+                    shiftHeight += 50;
+                }
+                break;
+            }
+            case 6:{
+                break;
+            }
         }
     }
 }
