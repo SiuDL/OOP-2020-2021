@@ -83,8 +83,8 @@ public class Loops extends PApplet {
                     fill(cgap * i, 255, 255);
                     ellipse(w / 2 + (i * w), cy, w, w);
                 }
+                break;
             }
-            break;
             case 4:{
                 int i, shiftHeight = 0;
                 int numRects = 10;
@@ -114,6 +114,25 @@ public class Loops extends PApplet {
                 break;
             }
             case 6:{
+                int numCircles = 10;
+                int shiftHeight = 0;
+                float cgap = 255 / (float) numCircles;
+
+                for(int i=0; i<numCircles; i++){
+                    fill(cgap * i, 255, 255);
+                    ellipse(width/2, height/2, width+shiftHeight, height+shiftHeight);
+                    shiftHeight -=50;
+                }
+                break;
+            }
+            case 7:{
+                int line=5;
+                float r=100, a, inc = TWO_PI/(float)line;                
+                for(int i=0;i<line;i++){
+                    a = inc*i;
+                    stroke(100,255,255);
+                    line(cx,cy,cx+(sin(a)*r),cy+(cos(a)*r));
+                }
                 break;
             }
         }
