@@ -104,8 +104,8 @@ public class Loops extends PApplet {
                     float y = cos(angle) * radius;
                     line(cx, cy, cx + x, cy + y);                    
                 }
+                break;
             }
-            break;
             case 5:
             {
                 rectMode(CORNER);
@@ -132,7 +132,8 @@ public class Loops extends PApplet {
                     w = i * gap;
                     ellipse(cx, cy, w, w);
                     
-                }                
+                }
+                break;        
             }
             case 7:
             {
@@ -149,6 +150,7 @@ public class Loops extends PApplet {
                         ellipse((w / 2) + w * j, (w / 2) + w * i, w, w);
                     }
                 }
+                break;
             }
             case 8:
             {
@@ -164,6 +166,7 @@ public class Loops extends PApplet {
                     float y2 = cos(theta * i) * radius;
                     line(cx + x1, cy + y1, cx + x2, cy + y2);
                 }
+                break;
             }
         }
     }
