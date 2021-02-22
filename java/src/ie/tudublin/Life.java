@@ -15,12 +15,12 @@ public class Life extends PApplet {
         for(int r = row-1; r<=row+1; r++){
             for(int c = col-1; c<=col+1; c++){
                 if(r != row && c != col){
-                    count++;
+                    //count++;
                     
                     // getCell function not working
-                    /*if(getCell(board, r, c)){
+                    if(getCell(board, r, c)){
                         count++;
-                    }*/
+                    }
                 }
             }
         }
@@ -100,8 +100,7 @@ public class Life extends PApplet {
     public void setup() {
         colorMode(RGB);
         //randomize();
-        board[0][0] = true;
-        board[0][2] = true;
+        board[0][1] = true;
         board[1][2] = true;
         board[3][2] = true;
 
