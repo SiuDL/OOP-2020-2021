@@ -12,17 +12,37 @@ public class Life extends PApplet {
         int count = 0;
         // use getCell here
         
-        for(int r = row-1; r<=row+1; r++){
-            for(int c = col-1; c<=col+1; c++){
-                if(r != row && c != col){
-                    //count++;
-                    
-                    // getCell function not working
-                    if(getCell(board, r, c)){
-                        count++;
-                    }
-                }
-            }
+        if (getCell(board, row-1, col-1))
+        {
+            count ++;
+        }
+        if (getCell(board, row-1, col))
+        {
+            count ++;
+        }
+        if (getCell(board, row-1, col+1))
+        {
+            count ++;
+        }
+        if (getCell(board, row, col-1))
+        {
+            count ++;
+        }
+        if (getCell(board, row, col+1))
+        {
+            count ++;
+        }
+        if (getCell(board, row+1, col-1))
+        {
+            count ++;
+        }
+        if (getCell(board, row+1, col))
+        {
+            count ++;
+        }
+        if (getCell(board, row+1, col+1))
+        {
+            count ++;
         }
 
         return count;
