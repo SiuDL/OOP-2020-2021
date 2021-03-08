@@ -17,7 +17,7 @@ public class Audio1 extends PApplet {
 
     public void settings()
     {
-        size(512, 512);
+        size(800, 800);
     }
 
     float y = 200;
@@ -27,7 +27,7 @@ public class Audio1 extends PApplet {
     {
         minim = new Minim(this);
         ai = minim.getLineIn(Minim.MONO, width, 44100, 16);
-        ap = minim.loadFile("kkk.mp3", width);
+        ap = minim.loadFile("ShadowMoses.mp3", width);
         ap.play();
         //ab = ai.mix; // Connect the buffer to mic
         ab = ap.mix; // Connect the buffer to file
@@ -44,13 +44,18 @@ public class Audio1 extends PApplet {
         float halfHeight = height/2;
         float average = 0;
         float sum = 0;
+        int i;
 
-        for(int i=0;i<ab.size();i++){ // .size() gets the size on an array buffer
+        for(i=0;i<ab.size();i++){ // .size() gets the size on an array buffer
             float c = map(i, 0, ab.size(), 0, 255);
             stroke(c, 255, 255);
             lerpedBuffer[i] = lerp(lerpedBuffer[i], ab.get(i), 0.1f);
-
+            
             line(i, halfHeight - (lerpedBuffer[i] * halfHeight * 2), halfHeight + (lerpedBuffer[i] * halfHeight * 2), i);
+
+            // for mp3 input
+            //line(i, halfHeight - (lerpedBuffer[i] * halfHeight), i, halfHeight + (lerpedBuffer[i] * halfHeight));
+            //line(halfHeight - (lerpedBuffer[i] * halfHeight), i, halfHeight + (lerpedBuffer[i] * halfHeight), i);
 
             sum += abs(ab.get(i));
         }
