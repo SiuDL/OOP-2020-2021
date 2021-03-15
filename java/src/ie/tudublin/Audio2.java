@@ -16,7 +16,11 @@ public class Audio2 extends PApplet {
     FFT fft;
 
     public void settings() {
+<<<<<<< HEAD
         size(800, 800, P3D);
+=======
+        size(1024, 1024);
+>>>>>>> aef995604f19f4b3ff5334a6860a0664e2e775da
         //fullScreen(P3D, SPAN); // Try this for full screen multiple monitor support :-) Be careful of exceptions!
     }
 
@@ -66,13 +70,17 @@ public class Audio2 extends PApplet {
         for(int i = 0 ; i < ab.size() ; i ++)
         {
             stroke(map(i, 0, ab.size(), 0, 255), 255, 255);
-            line(i, halfHeight - (ab.get(i) * halfHeight), i, halfHeight + (ab.get(i) * halfHeight));
+            //line(i, halfHeight - (ab.get(i) * halfHeight), i, halfHeight + (ab.get(i) * halfHeight));
         }
 
         fft.window(FFT.HAMMING);
         fft.forward(ab);
 
+<<<<<<< HEAD
         
+=======
+        int highestBand = 0;
+>>>>>>> aef995604f19f4b3ff5334a6860a0664e2e775da
         for(int i = 0 ; i < fft.specSize() ; i ++)
         {
             stroke(map(i, 0, fft.specSize(), 0, 255), 255, 255);
@@ -80,5 +88,11 @@ public class Audio2 extends PApplet {
         }
 
         float freq = fft.indexToFreq(highestBand);
+<<<<<<< HEAD
+=======
+        textSize(24);
+        fill(255);
+        text("Frequency: " + freq, 10, 50);
+>>>>>>> aef995604f19f4b3ff5334a6860a0664e2e775da
     }
 }
