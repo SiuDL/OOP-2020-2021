@@ -11,7 +11,10 @@ public class YASC extends PApplet {
 
     void drawPlayer(float x, float y)
     {
-
+        line(x - halfW, y + halfW, x, y - halfW);
+        line(x, y - halfW, x + halfW, y + halfW);
+        line(x + halfW, y + halfW, x, y);
+        line(x, y, x - halfW, y + halfW);
     }
 
     void movePlayer()
@@ -19,6 +22,18 @@ public class YASC extends PApplet {
         if (checkKey(UP))
         {
             y -= 1;
+        }
+        if (checkKey(DOWN))
+        {
+            y += 1;
+        }
+        if (checkKey(LEFT))
+        {
+            x -= 1;
+        }
+        if (checkKey(RIGHT))
+        {
+            x += 1;
         }
     }
 
