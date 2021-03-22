@@ -46,6 +46,7 @@ public class YASC extends PApplet {
     }
 
     public void mousePressed() {
+        
     }
 
     public void keyPressed() {
